@@ -7,9 +7,12 @@
     <style>
       body {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
       }
       .button {
         width: 200px;
@@ -17,7 +20,7 @@
         border: none;
         border-radius: 10px;
         cursor: pointer;
-        margin-left: 10px;
+        margin: 10px;
         font-size: 16px;
         transition: all 0.3s ease-in-out;
       }
@@ -45,6 +48,21 @@
         background-color: #fbda61;
         background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
       }
+
+      .result {
+        padding: 15px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 200px;
+        background-color: #ffdee9;
+        background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+        border-radius: 10px;
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
@@ -53,14 +71,39 @@
         Mời em chọn một trong những cái nút dưới đây (Mà em ngày nào cũng ao
         ước)
       </h2>
-      <button class="button one">Next 1 year</button>
-      <button class="button two">Next 2 years</button>
-      <button class="button three">Next 3 years</button>
-      <button class="button four">Next 4 years</button>
+      <button
+        class="button one"
+        onclick="showResult('Một năm sau bé đã có mặt tại nước Đức xinh đẹp ạ, hihi!')"
+      >
+        Next 1 year
+      </button>
+      <button
+        class="button two"
+        onclick="showResult('Sau 2 năm bạn sẽ thấy mình trưởng thành hơn và nói thành thạo tiếng Đức và có công việc đầu tiên bên đó!!')"
+      >
+        Next 2 years
+      </button>
+      <button
+        class="button three"
+        onclick="showResult('Sau 3 năm bé đã có công việc ổn định mà mình yêu thích và tiết kiệm được một khoản tiền khá lớn, và đón bố mẹ sang Đức thành công!!')"
+      >
+        Next 3 years
+      </button>
+      <button
+        class="button four"
+        onclick="showResult('Sau 4 năm em sẽ có tất cả những gì bạn muốn, và trở về Việt Nam gặp lại anh iu và mình cùng nhau tổ chức đám cưới, hihi, kết thúc òi - HAPPY NEW YEAR!')"
+      >
+        Next 4 years
+      </button>
 
-      <div>
-            <p>Nội dung tương ứng sẽ được hiển thị khi click vào mỗi nút</p>
-      </div>
+      <div class="result" id="result">Tương lai của bé ở đây !!</div>
     </div>
+
+    <script>
+      function showResult(message) {
+        const resultElement = document.getElementById("result");
+        resultElement.textContent = message;
+      }
+    </script>
   </body>
 </html>
