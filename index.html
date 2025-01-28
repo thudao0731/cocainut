@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ước gì em có cái nút</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .button {
+        width: 200px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-left: 10px;
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .button:hover {
+        opacity: 0.6;
+      }
+
+      .one {
+        background-color: #0093e9;
+        background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+      }
+
+      .two {
+        background-color: #fbab7e;
+        background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+      }
+
+      .three {
+        background-color: #08aeea;
+        background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
+      }
+
+      .four {
+        background-color: #fbda61;
+        background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>
+        Mời em chọn một trong những cái nút dưới đây (Mà em ngày nào cũng ao
+        ước)
+      </h2>
+      <button class="button one">Next 1 year</button>
+      <button class="button two">Next 2 years</button>
+      <button class="button three">Next 3 years</button>
+      <button class="button four">Next 4 years</button>
+
+      <div>
+            <p>Nội dung tương ứng sẽ được hiển thị khi click vào mỗi nút</p>
+      </div>
+    </div>
+  </body>
+</html>
